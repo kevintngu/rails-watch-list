@@ -1,0 +1,7 @@
+<h1>Create a bookmark for <%= @list.name %></h1>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.association :movie, input_html: { data: {controller: 'select2'} }  %>
+  <%= f.input :comment %>
+  <%= f.button :submit %>
+<% end %>

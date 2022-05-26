@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th>name</th>
+    <th>link</th>
+  </tr>
+  <% @lists.each do |list| %>
+  <tr>
+    <td><%= list.name %></td>
+    <td><%= link_to "go to list", list_path(list) %></td>
+  </tr>
+  <% end %>
+</table>
+<%= link_to "create list", new_list_path %>

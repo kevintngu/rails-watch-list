@@ -1,0 +1,15 @@
+<h1><%= @list.name %></h1>
+<table>
+  <tr>
+  <th>comment</th>
+  <th>delete</th>
+  </tr>
+<% @list.bookmarks.each do |bookmark| %>
+<tr>
+  <td><%= bookmark.comment %></td>
+  <td><%= link_to "Delete Bookmark", bookmark_path(bookmark) %></td>
+</tr>
+<% end %>
+</table>
+<h3><%= link_to "Add a bookmark", new_list_bookmark_path(@list) %></h3>
+<h3><%= link_to "Home", lists_path %></h3>
