@@ -35,6 +35,8 @@ gem "faker"
 
 gem 'simple_form', github: 'heartcombo/simple_form'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

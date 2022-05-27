@@ -11,6 +11,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
+      <div class="container-fluid d-flex justify-content-end">
+     <span class="text-decoration-none"> <%= link_to "Home", root_path %></span>
+      </div>
+    </div>
+      <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+      <div class="container">
+        <h1 class="d-flex justify-content-center">Notflix</h1>
+      </div>
+    </div>
+      <%= yield %>
+  </div>
   </body>
 </html>

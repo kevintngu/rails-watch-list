@@ -1,13 +1,15 @@
-<table>
-  <tr>
-    <th>name</th>
-    <th>link</th>
-  </tr>
+ <div class="d-flex flex-row m-5 justify-content-center">
   <% @lists.each do |list| %>
-  <tr>
-    <td><%= list.name %></td>
-    <td><%= link_to "go to list", list_path(list) %></td>
-  </tr>
+     <div class="card mx-5" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title"><%= list.name %></h5>
+        <p class="card-text">something</p>
+        <%= link_to "go to list", list_path(list) %>
+        </div>
+    </div>
   <% end %>
-</table>
+ </div>
+ <div class="d-flex justify-content-center text-decoration-none">
 <%= link_to "create list", new_list_path %>
+ </div>
